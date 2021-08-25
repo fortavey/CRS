@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="30"
+   height="40"
+   viewBox="0 0 7.9374998 10.583334"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (ce6663b3b7, 2021-05-25)"
+   sodipodi:docname="lock.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     width="30px"
+     inkscape:zoom="10.732997"
+     inkscape:cx="-8.2456003"
+     inkscape:cy="18.075101"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="1680"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2981">
+      <stop
+         style="stop-color:#ff7c14;stop-opacity:1"
+         offset="0"
+         id="stop2977" />
+      <stop
+         style="stop-color:#ff3b56;stop-opacity:1"
+         offset="1"
+         id="stop2979" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2981"
+       id="linearGradient2983"
+       x1="3.880929"
+       y1="0.34337798"
+       x2="3.9818206"
+       y2="10.740837"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Слой 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path2532"
+       style="fill:none;stroke:url(#linearGradient2983);stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 3.942213,6.5977922 0.00876,2.1598311 M 4.454942,6.5885859 A 0.52143627,0.53023779 0 0 1 3.9335058,7.1188236 0.52143627,0.53023779 0 0 1 3.4120695,6.5885859 0.52143627,0.53023779 0 0 1 3.9335058,6.0583481 0.52143627,0.53023779 0 0 1 4.454942,6.5885859 Z M 6.4347481,4.7758225 C 6.4195769,1.907251 6.4422022,0.7246932 3.8929943,0.76850735 1.5968165,0.80797258 1.481948,1.8235671 1.4719668,3.3952654 m -1.1731874,1.3749211 7.355919,-0.011688 0.019804,5.5955965 -7.36102831,0.0058 z" />
+  </g>
+</svg>
