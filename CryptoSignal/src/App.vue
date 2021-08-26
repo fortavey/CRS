@@ -6,6 +6,7 @@
     <Rules />
     <Fields />
     <Terminal />
+    <Support />
     <FreePlaces @open-popup="isPopup = true"/>
     <Footer />
     <FreePopup v-if="isPopup" @close-popup="isPopup = false"/>
@@ -22,6 +23,7 @@ import Rules from './components/Rules.vue';
 import Terminal from './components/Terminal.vue';
 import Footer from './components/Footer.vue';
 import FreePopup from './components/FreePopup.vue';
+import Support from './components/Support.vue';
 
 export default {
   name: 'App',
@@ -34,6 +36,7 @@ export default {
     Terminal,
     Footer,
     FreePopup,
+    Support,
   },
   data: () => ({
     isPopup: false,
