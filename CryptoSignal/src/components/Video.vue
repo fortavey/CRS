@@ -1,7 +1,7 @@
 <template>
     <div class="video-block" :style="getBgStyle">
         <div class="wrapper">
-            <iframe width="100%" :height="height" src="https://www.youtube.com/embed/U6_Qmm5skKU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" :height="height" src="https://www.youtube.com/embed/Jke7THpv3ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 </template>
