@@ -7,6 +7,7 @@
     <Fields />
     <Terminal />
     <Support />
+    <Reviews />
     <FreePlaces @open-popup="isPopup = true"/>
     <Footer />
     <FreePopup v-if="isPopup" @close-popup="isPopup = false"/>
@@ -24,6 +25,7 @@ import Terminal from './components/Terminal.vue';
 import Footer from './components/Footer.vue';
 import FreePopup from './components/FreePopup.vue';
 import Support from './components/Support.vue';
+import Reviews from './components/Reviews.vue';
 
 export default {
   name: 'App',
@@ -37,6 +39,7 @@ export default {
     Footer,
     FreePopup,
     Support,
+    Reviews,
   },
   data: () => ({
     isPopup: false,
@@ -60,7 +63,7 @@ export default {
     fetch('https://crypto-signal.ru/users/get_cnt.php')
       .then((res) => res.json())
       .then((data) => this.setUsers(data.counter))
-      .catch((err) => console.log(err));
+      .catch((err) => err);
   },
 };
 </script>

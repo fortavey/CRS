@@ -6,10 +6,7 @@
             <span>Задай вопрос</span> нашему специалисту
           </div>
           <div class="content">
-            <div class="q-text" v-if="isPublish">
-              <p style="font-weight:500">{{ printLogin }}</p>
-              <p style="font-weight:300">{{ printQuestionText }}</p>
-            </div>
+            <p v-if="msgs">{{ msgs }}</p>
             <input type="text" name="login" id="login" placeholder="Telegram логин или Email"
             v-model="login">
             <textarea name="question" id="question" placeholder="Текст вопроса"
@@ -29,9 +26,7 @@ export default {
   data: () => ({
     login: '',
     questionText: '',
-    printLogin: '',
-    printQuestionText: '',
-    isPublish: false,
+    msgs: '',
   }),
   computed: {
     ...mapGetters('colors', ['getColors']),
@@ -42,9 +37,13 @@ export default {
   methods: {
     submit() {
       if (this.login && this.questionText) {
-        this.isPublish = true;
-        this.printLogin = this.login;
-        this.printQuestionText = this.questionText;
+        fetch(`https://crypto-signal.ru/support/request.php?login=${this.login}&question=${this.questionText}`)
+          .then((req) => req.json())
+          .then((data) => {
+            this.msgs = data.result ? 'Сообщение успешно отправлено!' : 'Ошибка отправки сообщения!';
+            return null;
+          })
+          .catch((err) => { this.msgs = 'Ошибка отправки сообщения!'; return err; });
         this.login = '';
         this.questionText = '';
       }
@@ -54,6 +53,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.wrapper {
+  max-width: 800px;
+}
 .form {
   padding: 20px 0;
 }
@@ -67,6 +69,9 @@ export default {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   height: 50px;
+  @media screen and (max-width: 500px) {
+    font-size: 15px;
+  }
   span {
     font-weight: bold;
     margin-right: 10px;
@@ -77,6 +82,9 @@ export default {
   background-color: rgba(0,0,0,0.2);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  @media screen and (max-width: 400px) {
+    padding: 30px;
+  }
   input[type=text], textarea {
     display: block;
     width: 100%;
@@ -92,6 +100,9 @@ export default {
     width: 300px;
     margin-bottom: 20px;
     padding-left: 20px;
+    @media screen and (max-width: 400px) {
+      width: 100%;
+    }
   }
   textarea {
     height: 120px;
@@ -109,6 +120,9 @@ export default {
   border-radius: 10px;
   margin-left: auto;
   cursor: pointer;
+  @media screen and (max-width: 400px) {
+    width: 100%;
+  }
 }
 .q-text {
   margin-bottom: 50px;
