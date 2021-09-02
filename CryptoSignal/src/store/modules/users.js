@@ -2,7 +2,7 @@ const usersStore = {
   namespaced: true,
   state: {
     users: {
-      count: 52,
+      count: 62,
     },
   },
   getters: {

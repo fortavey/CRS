@@ -2,7 +2,7 @@
     <div class="free-popup" @click="$emit('close-popup')">
       <div class="popup-content" @click.stop>
         <img class="close" src="../assets/cancel.svg" alt="close" @click="$emit('close-popup')">
-        <div class="text">
+        <div class="text" v-if="isFree">
             Для того что бы попасть в число первых
             100 подписчиков вам необходимо выполнить 3 простых шага:
             <ul>
@@ -14,6 +14,24 @@
             После этих несложных манипуляций вы будете добавленны
             в премиум канал с пожизненной подпиской.
         </div>
+        <div class="text" v-else style="font-size:15px;">
+            Для оформления подписки Вам необходимо оплатить 10 USDT на этот кошелек:
+            <br><hr>
+            <strong>USDT(TRC20):</strong><br>
+            TTmuYBmmULQPnuBqZ87k1nizZiXS8sw1Z3
+            <hr>
+            <span style="color:red">!!! ВНИМАНИЕ !!!<br>
+            Перевод должен быть именно по сети TRON (TRC20)</span><br>
+            <br>
+            После оплаты вышлите нам адрес (TxID) своей транзакции в ЛС вот сюда - <a href="https://t.me/manager_cryptosignal" style="color:blue" target="_blank">@manager_cryptosignal</a>
+            <br>
+            <br>
+            Когда мы проверим транзакцию Вы будете добавлены в Телеграм бот,
+            где дублируются сигналы из премиум каналов.
+            <br>
+            <br>
+            <span style="font-size:13px;">Если у Вас возникнут сложности напишите нашему менеджеру <a href="https://t.me/manager_cryptosignal" style="color:blue" target="_blank">@manager_cryptosignal</a> или оставьте свой вопрос через форму на сайте.</span>
+        </div>
       </div>
     </div>
 </template>
@@ -22,6 +40,7 @@
 
 export default {
   name: 'FreePopup',
+  props: ['isFree'],
   data: () => ({
   }),
 };
@@ -48,6 +67,9 @@ export default {
     color: #071F43;
     padding: 15px;
     position: relative;
+    @media screen and (max-width: 500px) {
+      max-width: 90%;
+    }
     a {
       text-decoration: none;
       color: red;

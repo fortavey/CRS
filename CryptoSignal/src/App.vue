@@ -10,7 +10,7 @@
     <Reviews />
     <FreePlaces @open-popup="isPopup = true"/>
     <Footer />
-    <FreePopup v-if="isPopup" @close-popup="isPopup = false"/>
+    <FreePopup v-if="isPopup" @close-popup="isPopup = false" :isFree="true"/>
   </div>
 </template>
 

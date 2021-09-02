@@ -159,6 +159,9 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
     img {
       max-width: 100%;
       max-height: 100%;
