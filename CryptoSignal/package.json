@@ -10,6 +10,8 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^3.0.0",
+    "vue-analytics": "^5.22.1",
+    "vue-gtag": "^2.0.1",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
