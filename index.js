@@ -23,7 +23,10 @@ bot.on('message', (msg) => {
             textObj.str = textObj.str2;
         }
 
-        const html = `*Здравствуйте, ${msg.from.first_name}
+        const isStar = msg.from.first_name.includes('*'); // Звёздочка в имени пользователя
+        const name = isStar ? '' : msg.from.first_name;
+
+        const html = `*Здравствуйте, ${name}
             
             ${textObj.str}
         `;
