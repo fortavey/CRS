@@ -1,3 +1,4 @@
+process.env.NTBA_FIX_319 = 1;
 const TelegramBot = require('node-telegram-bot-api');
 const userList = require('./userList');
 const textObj = require('./text');
