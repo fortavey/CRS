@@ -5,6 +5,7 @@ const textObj = require('./text');
 const TOKEN = require('./token');
 const myForwardMessage = require('./forwardMessage');
 
+console.log('Bot is running...');
 
 const bot = new TelegramBot(TOKEN, {
     polling: true,
