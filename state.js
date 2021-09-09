@@ -1,6 +1,6 @@
 const state = {
   TxID: false,
-  wallet: 'TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t'
+  wallet: 'TYvApbhdETYGQPXHxAZ8Ybe28WHMEkZcEr'
 }
 
 module.exports = state;
